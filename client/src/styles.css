@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #102326;
+  background: #eaf4f7;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+#app {
+  width: min(100vw, 1120px);
+  padding: 16px;
+}
+
+#game-canvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 2px solid #173b42;
+  border-radius: 8px;
+  background: #10191d;
+  box-shadow: 0 18px 38px rgb(16 35 39 / 16%);
+  cursor: crosshair;
+  touch-action: none;
+}
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+p {
+  margin: 6px 0 0;
+  font-weight: 700;
+}
+
+#hud-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, auto));
+  gap: 8px;
+  justify-content: end;
+  min-width: min(100%, 470px);
+}
+
+#room-status,
+#score-status,
+#round-status,
+#game-action-button {
+  border: 1px solid #7bb9c5;
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: #f7fcfd;
+  text-align: center;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+#score-status,
+#round-status {
+  grid-column: span 2;
+}
+
+#game-action-button {
+  grid-column: span 2;
+  cursor: pointer;
+  font: inherit;
+  color: #f7fcfd;
+  background: #173b42;
+}
+
+#game-action-button:hover:not(:disabled) {
+  background: #245d66;
+}
+
+#game-action-button:disabled {
+  cursor: not-allowed;
+  color: #4f6f75;
+  background: #cfe4e9;
+}
+
+@media (max-width: 700px) {
+  body {
+    display: block;
+  }
+
+  #app {
+    padding: 10px;
+  }
+
+  #hud {
+    flex-direction: column;
+  }
+
+  #hud-panel {
+    width: 100%;
+    justify-content: stretch;
+  }
+}

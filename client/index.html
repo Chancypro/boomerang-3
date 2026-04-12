@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>boomerang-2</title>
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="game-canvas" width="960" height="540" aria-label="boomerang-2 game canvas"></canvas>
+      <section id="hud" aria-live="polite">
+        <div>
+          <h1>boomerang-2</h1>
+          <p id="connection-status">启动中...</p>
+        </div>
+        <div id="hud-panel">
+          <div id="room-status">房间 0/6</div>
+          <div id="score-status">比分等待同步</div>
+          <div id="round-status">等待玩家</div>
+          <button id="game-action-button" type="button" hidden>开始游戏</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
