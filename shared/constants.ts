@@ -4,7 +4,7 @@ export const APP_NAME = 'boomerang-2';
 // Vite 前端开发服务器默认端口。
 export const CLIENT_DEV_PORT = 5173;
 // Node.js 游戏服务器默认端口。
-export const SERVER_PORT = 3000;
+export const SERVER_PORT = 3333;
 // WebSocket 服务路径。
 export const WS_PATH = '/ws';
 
